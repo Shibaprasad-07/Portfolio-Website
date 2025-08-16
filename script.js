@@ -20,3 +20,17 @@ document.querySelectorAll("nav a").forEach((anchor) => {
     }
   });
 });
+
+// Section Toggle
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const section = button.closest('.section');
+        const content = section.querySelector('.section-content');
+
+        // Toggle visibility
+        content.classList.toggle('hidden');
+
+        // Change button symbol
+        button.textContent = content.classList.contains('hidden') ? '+' : '−';
+    });
+});
