@@ -3,154 +3,424 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shibaprasad's Portfolio</title>
+  <title>Shibaprasad Sethi - Web Developer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-
-  </style>
 </head>
 <body>
   <header>
     <nav>
       <h1>Shiba Prasad Sethi</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <button class="mobile-toggle d-md-none" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="hero">
-    <img src="image 1.jpg" alt="Profile Picture" class="profile-pic" />
-    <h3>Hey! I am Shiba Prasad</h3>
-    <h2>Web Developer & CSE Student</h2>
-    <p>Passionate about building modern web apps and exploring new technologies.</p>
-    <a href="Shiba's Resume.pdf" download class="btn btn-resume">Download Resume</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a final-year B.Tech student in Computer Science at Raajdhani Engineering College, Bhubaneswar.<br>
-      I love web development and modern tech. I strive to create clean, performant, and impactful applications.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-grid">
-      <div><img src="html.webp" alt="HTML"/>HTML</div>
-      <div><img src="css.png" alt="CSS"/>CSS</div>
-      <div><img src="js.png" alt="JavaScript"/>JavaScript</div>
-      <div><img src="git.png" alt="Git"/>Git</div>
-      <div><img src="github.png" alt="GitHub"/>GitHub</div>
-      <div><img src="java.png" alt="Core Java"/>Core Java</div>
-      <div><img src="mongo.svg" alt="MongoDB"/>MongoDB</div>
-      <div><img src="boot.png" alt="Bootstrap"/>Bootstrap</div>
-      <div><img src="node.webp" alt="NodeJS"/>NodeJS</div>
-      <div><img src="vs.webp" alt="Visual Studio"/>Visual Studio</div>
-      <div><img src="postman.png" alt="Postman"/>Postman</div>
-      <div><img src="canva.jpg" alt="Canva"/>Canva</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="spotify.png" alt="Spotify Clone" />
-        <div class="project-info">
-          <h3>Spotify Clone</h3>
-          <p>A music streaming UI clone using HTML, CSS & JS.</p>
-          <div class="links">
-            <a href="https://github.com/Shibaprasad-07/Spotify-clone-mini-proj" target="_blank" class="btn">GitHub</a>
-            <a href="https://wondrous-douhua-d99edf.netlify.app/" target="_blank" class="btn">Live Demo</a>
+  <section id="hero" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <img src="image 1.jpg" alt="Shibaprasad Sethi" class="profile-pic img-fluid rounded-circle shadow" />
+        </div>
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-3">Hey! I'm Shibaprasad Sethi</span></h1>
+          <h2 class="h3 text-muted mb-3">Passionate Web Developer & Final Year B.Tech CSE Student</h2>
+          <p class="lead mb-4">Dedicated to crafting innovative web solutions and exploring cutting-edge technologies. Currently pursuing B.Tech in Computer Science Engineering with a focus on full-stack development.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="Shiba's Resume.pdf" download class="btn btn-primary btn-lg">
+              <i class="fas fa-download me-2"></i>Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline-primary btn-lg">
+              <i class="fas fa-envelope me-2"></i>Get In Touch
+            </a>
           </div>
         </div>
       </div>
-      <div class="project-card">
-        <img src="wanderlust.png" alt="Vacation Rental" />
-        <div class="project-info">
-          <h3>Vacation Rental Platform</h3>
-          <p>Full-stack app for listing and booking rentals.</p>
-          <div class="links">
-            <a href="https://github.com/Shibaprasad-07/MAJOR-PROJECT" target="_blank" class="github">GitHub</a>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">About Me</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <p class="lead text-center mb-4">
+                I am a passionate and dedicated final-year B.Tech student in Computer Science Engineering at Raajdhani Engineering College, Bhubaneswar.
+              </p>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-code text-primary me-3 mt-1"></i>
+                    <div>
+                      <h5>Web Development Enthusiast</h5>
+                      <p class="mb-0">Passionate about creating responsive, user-friendly web applications using modern technologies and frameworks.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-graduation-cap text-primary me-3 mt-1"></i>
+                    <div>
+                      <h5>Academic Excellence</h5>
+                      <p class="mb-0">Final year B.Tech CSE student with strong foundation in programming, algorithms, and software engineering principles.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-lightbulb text-primary me-3 mt-1"></i>
+                    <div>
+                      <h5>Innovation Driven</h5>
+                      <p class="mb-0">Always exploring new technologies and methodologies to create impactful and efficient solutions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="fas fa-rocket text-primary me-3 mt-1"></i>
+                    <div>
+                      <h5>Future Goals</h5>
+                      <p class="mb-0">Aspiring to become a full-stack developer and contribute to meaningful projects that make a difference.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Technical Skills</h2>
+      
+      <!-- Frontend Technologies -->
+      <div class="mb-5">
+        <h4 class="text-center mb-4 text-primary">Frontend Development</h4>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="html.webp" alt="HTML" class="skill-icon mb-2"/>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="css.png" alt="CSS" class="skill-icon mb-2"/>
+              <h6>CSS3</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="js.png" alt="JavaScript" class="skill-icon mb-2"/>
+              <h6>JavaScript</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="boot.png" alt="Bootstrap" class="skill-icon mb-2"/>
+              <h6>Bootstrap</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend & Database -->
+      <div class="mb-5">
+        <h4 class="text-center mb-4 text-primary">Backend & Database</h4>
+        <div class="row g-3 justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="node.webp" alt="NodeJS" class="skill-icon mb-2"/>
+              <h6>Node.js</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="mongo.svg" alt="MongoDB" class="skill-icon mb-2"/>
+              <h6>MongoDB</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="express.png" alt="MongoDB" class="skill-icon mb-2"/>
+              <h6>Express js</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="java.png" alt="Core Java" class="skill-icon mb-2"/>
+              <h6>Java</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Others -->
+      <div>
+        <h4 class="text-center mb-4 text-primary">Tools & Technologies</h4>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="git.png" alt="Git" class="skill-icon mb-2"/>
+              <h6>Git</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="github.png" alt="GitHub" class="skill-icon mb-2"/>
+              <h6>GitHub</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="vs.webp" alt="VS Code" class="skill-icon mb-2"/>
+              <h6>VS Code</h6>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-card text-center p-3 h-100">
+              <img src="postman.png" alt="Postman" class="skill-icon mb-2"/>
+              <h6>Postman</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Featured Projects</h2>
+      <div class="row g-4">
+        <!-- Spotify Clone -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="spotify.png" alt="Spotify Clone" class="card-img-top" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Spotify Clone</h5>
+              <p class="card-text flex-grow-1">A responsive music streaming UI clone built with HTML5, CSS3, and JavaScript featuring playlist management and audio controls.</p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="https://github.com/Shibaprasad-07/Spotify-clone-mini-proj" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+                <a href="https://wondrous-douhua-d99edf.netlify.app/" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vacation Rental Platform -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="wanderlust.png" alt="Vacation Rental Platform" class="card-img-top" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Wanderlust - Vacation Rental</h5>
+              <p class="card-text flex-grow-1">Full-stack web application for vacation rental listings with user authentication, booking system, and property management features.</p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="https://github.com/Shibaprasad-07/MAJOR-PROJECT" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Website -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="parralax.png" alt="Portfolio Website" class="card-img-top" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Parallax Portfolio</h5>
+              <p class="card-text flex-grow-1">Interactive portfolio website with parallax scrolling effects, smooth animations, and responsive design showcasing web development skills.</p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="https://github.com/Shibaprasad-07/Parallax-Scrolling" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+                <a href="https://venerable-cendol-bd6062.netlify.app/#" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photography Portfolio -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="photography.png" alt="Photography Portfolio" class="card-img-top" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Photography Portfolio</h5>
+              <p class="card-text flex-grow-1">Elegant photography showcase website with image galleries, lightbox effects, and responsive grid layout for visual storytelling.</p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="https://github.com/Shibaprasad-07/Photography-mini-proj" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+                <a href="https://silver-kitten-b9e3ad.netlify.app/" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Music Player -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="musicplayer.png" alt="Music Player" class="card-img-top" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Interactive Music Player</h5>
+              <p class="card-text flex-grow-1">Feature-rich music player with playlist functionality, audio visualization, and modern UI design built with vanilla JavaScript.</p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="https://github.com/Shibaprasad-07/MUSIC-PLAYER" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+                <a href="https://benevolent-medovik-2333ea.netlify.app/" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Portfolio -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <img src="efolio.png" alt="Demo Portfolio" class="card-img-top" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Professional Portfolio</h5>
+              <p class="card-text flex-grow-1">Clean and professional portfolio website demonstrating modern web development practices and responsive design principles.</p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="https://github.com/Shibaprasad-07/Demo-Portfolio" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-github me-1"></i>GitHub
+                </a>
+                <a href="https://benevolent-medovik-2333ea.netlify.app/" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="py-4" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+    <div class="container">
+      <div class="row text-center text-white">
+        <div class="col-md-3 col-6 mb-3">
+          <h3 class="fw-bold mb-1">6+</h3>
+          <p class="mb-0">Projects</p>
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+          <h3 class="fw-bold mb-1">3+</h3>
+          <p class="mb-0">Technologies</p>
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+          <h3 class="fw-bold mb-1">1</h3>
+          <p class="mb-0">Major Project</p>
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+          <h3 class="fw-bold mb-1">2026</h3>
+          <p class="mb-0">Graduate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Let's Connect</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="text-center mb-5">
+            <p class="lead">I'm always excited to discuss new opportunities, collaborate on projects, or simply connect with fellow developers and tech enthusiasts.</p>
+          </div>
           
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+              <a href="mailto:shibaprasadsethi07@gmail.com" class="contact-card text-decoration-none">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                  <div class="card-body p-4">
+                    <div class="contact-icon mb-3">
+                      <i class="fas fa-envelope fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Email</h5>
+                    <p class="card-text text-muted">Drop me a line</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <div class="col-md-4">
+              <a href="https://www.linkedin.com/in/shibaprasad-sethi-63498b31a/" target="_blank" class="contact-card text-decoration-none">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                  <div class="card-body p-4">
+                    <div class="contact-icon mb-3">
+                      <i class="fab fa-linkedin fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">LinkedIn</h5>
+                    <p class="card-text text-muted">Let's connect professionally</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <div class="col-md-4">
+              <a href="https://github.com/Shibaprasad-07" target="_blank" class="contact-card text-decoration-none">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                  <div class="card-body p-4">
+                    <div class="contact-icon mb-3">
+                      <i class="fab fa-github fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">GitHub</h5>
+                    <p class="card-text text-muted">Check out my code</p>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="parralax.png" alt="Portfolio" />
-        <div class="project-info">
-          <h3>Personal Portfolio Website</h3>
-          <p>Responsive portfolio to showcase my work and skills.</p>
-          <div class="links">
-            <a href="https://github.com/Shibaprasad-07/Parallax-Scrolling" target="_blank" class="btn">GitHub</a>
-            <a href="https://venerable-cendol-bd6062.netlify.app/#" target="_blank" class="btn">Live Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="photography.png" alt="Photography Portfolio" />
-        <div class="project-info">
-          <h3>Photography Portfolio</h3>
-          <p>Responsive portfolio to showcase my work and skills.</p>
-          <div class="links">
-            <a href="https://github.com/Shibaprasad-07/Photography-mini-proj" target="_blank" class="btn">GitHub</a>
-            <a href="https://silver-kitten-b9e3ad.netlify.app/" target="_blank" class="btn">Live Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="musicplayer.png" alt="Photography Portfolio" />
-        <div class="project-info">
-          <h3>Music Player</h3>
-          <p>Responsive portfolio to showcase my work and skills.</p>
-          <div class="links">
-            <a href="https://github.com/Shibaprasad-07/MUSIC-PLAYER" target="_blank" class="btn">GitHub</a>
-            <a href="https://benevolent-medovik-2333ea.netlify.app/" target="_blank" class="btn">Live Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="efolio.png" alt="Demo Website" />
-        <div class="project-info">
-          <h3>My Website</h3>
-          <p>Responsive portfolio to showcase my work and skills.</p>
-          <div class="links">
-            <a href="https://github.com/Shibaprasad-07/Demo-Portfolio" target="_blank" class="btn">GitHub</a>
-            <a href="https://benevolent-medovik-2333ea.netlify.app/" target="_blank" class="btn">Live Demo</a>
+          
+          <div class="text-center mt-5">
+            <p class="text-muted">Currently seeking internship and full-time opportunities in web development</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-icons">
-      <a class="contact-btn" href="mailto:your@email.com">
-        <img src="email.png" alt="Email" />
-        <span>Email</span>
-      </a>
-      <a class="contact-btn" href="https://www.linkedin.com/in/shibaprasad-sethi-63498b31a/" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn" />
-        <span>LinkedIn</span>
-      </a>
-      <a class="contact-btn" href="https://github.com/Shibaprasad-07" target="_blank">
-        <img src="github.png" alt="GitHub" />
-        <span>GitHub</span>
-      </a>
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">© 2025 Shibaprasad Sethi. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">Built with <i class="fas fa-heart text-danger"></i> using HTML, CSS, JS & Bootstrap</p>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2025 ShibaPrasad SK</p>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
